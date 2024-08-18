@@ -41,7 +41,7 @@
                     “Enter” to
                     Play</p>
                 <div class="flex justify-center mt-14">
-                    <button onclick="play()" id="Enter" class="bg-white px-8 py-[22px] text-[#010313] text-2xl font-semibold rounded-lg">Play
+                    <button onclick="play()" id="enterBtn" class="bg-white px-8 py-[22px] text-[#010313] text-2xl font-semibold rounded-lg">Play
                         Now</button>
                 </div>
 
@@ -62,34 +62,34 @@
                         <h1 id="word" class="text-[120px] font-semibold text-center ">Y</h1>
                     </div>
                     <div class="">
-                        <div class="flex flex-wrap justify-center gap-3 mt-16 w-[530px] mx-auto">
-                            <button onclick="clicked('q')" class="btn btn-active">q</button>
-                            <button onclick="clicked('w')" class="btn btn-active">w</button>
-                            <button onclick="clicked('e')" class="btn btn-active">e</button>
-                            <button onclick="clicked('r')" class="btn btn-active">r</button>
-                            <button onclick="clicked('t')" class="btn btn-active">t</button>
-                            <button onclick="clicked('y')" class="btn btn-active">y</button>
-                            <button onclick="clicked('u')" class="btn btn-active">u</button>
-                            <button onclick="clicked('i')" class="btn btn-active">i</button>
-                            <button onclick="clicked('o')" class="btn btn-active">o</button>
-                            <button onclick="clicked('p')" class="btn btn-active">p</button>
-                            <button onclick="clicked('a')" class="btn btn-active">a</button>
-                            <button onclick="clicked('s')" class="btn btn-active">s</button>
-                            <button onclick="clicked('d')" class="btn btn-active">d</button>
-                            <button onclick="clicked('f')" class="btn btn-active">f</button>
-                            <button onclick="clicked('g')" class="btn btn-active">g</button>
-                            <button onclick="clicked('h')" class="btn btn-active">h</button>
-                            <button onclick="clicked('j')" class="btn btn-active">j</button>
-                            <button onclick="clicked('k')" class="btn btn-active">k</button>
-                            <button onclick="clicked('l')" class="btn btn-active">l</button> <br>
-                            <button onclick="clicked('z')" class="btn btn-active">z</button>
-                            <button onclick="clicked('x')" class="btn btn-active">x</button>
-                            <button onclick="clicked('c')" class="btn btn-active">c</button>
-                            <button onclick="clicked('v')" class="btn btn-active">v</button>
-                            <button onclick="clicked('b')" class="btn btn-active">b</button>
-                            <button onclick="clicked('n')" class="btn btn-active">n</button>
-                            <button onclick="clicked('m')" class="btn btn-active">m</button>
-                            <button onclick="clicked('/')" class="btn btn-active">/</button>
+                        <div id="alphabet-container" class="flex flex-wrap justify-center gap-3 mt-16 w-[530px] mx-auto">
+                            <button onclick="clicked('q')" id="btn-q" class="btn btn-active">q</button>
+                            <button onclick="clicked('w')" id="btn-w" class="btn btn-active">w</button>
+                            <button onclick="clicked('e')" id="btn-e" class="btn btn-active">e</button>
+                            <button onclick="clicked('r')" id="btn-r" class="btn btn-active">r</button>
+                            <button onclick="clicked('t')" id="btn-t" class="btn btn-active">t</button>
+                            <button onclick="clicked('y')" id="btn-y" class="btn btn-active">y</button>
+                            <button onclick="clicked('u')" id="btn-u" class="btn btn-active">u</button>
+                            <button onclick="clicked('i')" id="btn-i" class="btn btn-active">i</button>
+                            <button onclick="clicked('o')" id="btn-o" class="btn btn-active">o</button>
+                            <button onclick="clicked('p')" id="btn-p" class="btn btn-active">p</button>
+                            <button onclick="clicked('a')" id="btn-a" class="btn btn-active">a</button>
+                            <button onclick="clicked('s')" id="btn-s" class="btn btn-active">s</button>
+                            <button onclick="clicked('d')" id="btn-d" class="btn btn-active">d</button>
+                            <button onclick="clicked('f')" id="btn-f" class="btn btn-active">f</button>
+                            <button onclick="clicked('g')" id="btn-g" class="btn btn-active">g</button>
+                            <button onclick="clicked('h')" id="btn-h" class="btn btn-active">h</button>
+                            <button onclick="clicked('j')" id="btn-j" class="btn btn-active">j</button>
+                            <button onclick="clicked('k')" id="btn-k" class="btn btn-active">k</button>
+                            <button onclick="clicked('l')" id="btn-l" class="btn btn-active">l</button> <br>
+                            <button onclick="clicked('z')" id="btn-z" class="btn btn-active">z</button>
+                            <button onclick="clicked('x')" id="btn-x" class="btn btn-active">x</button>
+                            <button onclick="clicked('c')" id="btn-c" class="btn btn-active">c</button>
+                            <button onclick="clicked('v')" id="btn-v" class="btn btn-active">v</button>
+                            <button onclick="clicked('b')" id="btn-b" class="btn btn-active">b</button>
+                            <button onclick="clicked('n')" id="btn-n" class="btn btn-active">n</button>
+                            <button onclick="clicked('m')" id="btn-m" class="btn btn-active">m</button>
+                            <button onclick="clicked('/')" id="btn-/" class="btn btn-active">/</button>
                         </div>
                     </div>
                     <div class="= flex justify-between mt-12 ">

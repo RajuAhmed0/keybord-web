@@ -23,7 +23,7 @@ function clicked(allWord) {
     if (word === allWord) {
         const score = document.getElementById('score').innerText;
         const scoreNum = parseInt(score);
-        const totalScore = scoreNum + 10;
+        const totalScore = scoreNum + 5;
 
         document.getElementById('score').innerText = totalScore;
 
@@ -60,3 +60,13 @@ function playAgain() {
 
 
 // enter key press section 
+  document.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+      document.getElementById("enterBtn").click(); 
+    }
+  });
+
+
+//   all alphabet keypress section 
+
+
