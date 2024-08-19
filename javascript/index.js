@@ -67,6 +67,19 @@ function playAgain() {
   });
 
 
-//   all alphabet keypress section 
+//  play again keypress section 
+document.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+      document.getElementById("playAgainBtn").click(); 
+    }
+  });
+
+
+//  keyboard keys section 
+document.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+      document.getElementById("btn-q").click(); 
+    }
+  });
 
 
