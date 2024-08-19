@@ -1,83 +1,97 @@
-function play() {
-    document.getElementById('first').classList.add('hidden')
-    document.getElementById('second').classList.remove('hidden')
-    
-    randomNumber()
+
+// advance dynamic js 
+window.onload = function () {
+  document.addEventListener('keyup', keyUp)
 }
+
+
+
 
 // random number section 
 function randomNumber() {
-    const word = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '/'];
+  const word = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '/'];
 
-    const randomNum = Math.floor(Math.random() * 27);
+  const randomNum = Math.floor(Math.random() * 27);
 
-    document.getElementById('word').innerText = word[randomNum];
-    // console.log( word[randomNum]);
-    
-    
+  document.getElementById('word').innerText = word[randomNum];
+  // console.log( word[randomNum]);
+
+
+}
+
+// advance js use 
+function keyUp(event) {
+  if (event.key === 'Enter') {
+    playAgain()
+  }
+  else {
+    clicked(event.key)
+  }
+
 }
 
 // keyboard typing section 
 function clicked(allWord) {
-    const word = document.getElementById('word').innerText;
-    if (word === allWord) {
-        const score = document.getElementById('score').innerText;
-        const scoreNum = parseInt(score);
-        const totalScore = scoreNum + 5;
+  const word = document.getElementById('word').innerText;
+  if (word === allWord) {
+    const score = document.getElementById('score').innerText;
+    const scoreNum = parseInt(score);
+    const totalScore = scoreNum + 5;
 
-        document.getElementById('score').innerText = totalScore;
+    document.getElementById('score').innerText = totalScore;
 
-        randomNumber()
-    } else {
-        const life = document.getElementById('life').innerText;
-        const lifeNum = parseInt(life);
-        const totalLife = lifeNum - 1;
-        document.getElementById('life').innerText = totalLife;
+    randomNumber()
+  } else {
+    const life = document.getElementById('life').innerText;
+    const lifeNum = parseInt(life);
+    const totalLife = lifeNum - 1;
+    document.getElementById('life').innerText = totalLife;
 
-        randomNumber()
+    randomNumber()
 
-        if (totalLife === 0) {
-            document.getElementById('second').classList.add('hidden');
-            document.getElementById('third').classList.remove('hidden');
+    if (totalLife === 0) {
+      document.getElementById('second').classList.add('hidden');
+      document.getElementById('third').classList.remove('hidden');
 
-            const score = document.getElementById('score').innerText;
-            document.getElementById('new-score').innerText = score;
-        }
+      const score = document.getElementById('score').innerText;
+      document.getElementById('new-score').innerText = score;
     }
+  }
 
 }
 // play section 
 function playAgain() {
-    document.getElementById('third').classList.add('hidden');
-    document.getElementById('second').classList.remove('hidden');
-    document.getElementById('life').innerText = 5;
+  document.getElementById('first').classList.add('hidden')
+  document.getElementById('third').classList.add('hidden');
+  document.getElementById('second').classList.remove('hidden');
+  document.getElementById('life').innerText = 5;
+  document.getElementById('score').innerText = 0;
 
-    randomNumber()
+  randomNumber()
 }
-
 
 
 
 
 // enter key press section 
-  document.addEventListener("keypress", function(event) {
-    if (event.key === "Enter") {
-      document.getElementById("enterBtn").click(); 
-    }
-  });
+/* document.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    document.getElementById("enterBtn").click();
+  }
+});
 
 
 //  play again keypress section 
-document.addEventListener("keypress", function(event) {
-    if (event.key === "Enter") {
-      document.getElementById("playAgainBtn").click(); 
-    }
-  });
+document.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    document.getElementById("playAgainBtn").click();
+  }
+}); */
 
-  
-//  keyboard keys section 
+
+//  keyboard keys section
 // q btn 
-document.addEventListener("keyup", function(event) {
+/* document.addEventListener("keyup", function(event) {
     if (event.key === "q") {
       document.getElementById("btn-q").click(); 
     }
@@ -244,3 +258,4 @@ document.addEventListener("keyup", function(event) {
 
 
 
+ */
